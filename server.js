@@ -151,8 +151,6 @@ app.get('/leaders', function(req, res){
 		db.all('SELECT * FROM users ORDER BY wins DESC, ties DESC, losses DESC LIMIT 10;',
 			function(err, row){
 				if (err){throw err;}
-				console.log("WE ARE IN THE LEADERS")
-				console.log(row)
 				res.json(row)
 			}
 		)

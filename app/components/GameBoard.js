@@ -17,8 +17,6 @@ var styles = {
 }
 
 function Box(props){
-	console.log('WE ARE IN THE BOX')
-	console.log(props)
 	return(
 		<div>
 			{props.end === false ? 
@@ -42,8 +40,6 @@ function Box(props){
 }
 
 function GameComponent(props){
-	console.log('WE ARE IN THE GAME COMPONENT')
-	console.log(props)
 	return(
 			<div className='row'>
 				{props.data.boxIdx.map(function(state){

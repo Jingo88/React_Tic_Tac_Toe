@@ -10,6 +10,7 @@ var styles = {
 	}
 }
 
+// Create List Item for each user for leaderboard
 function Leader(props){
 	const {username, wins, losses, ties} = props.data;
 
@@ -18,6 +19,7 @@ function Leader(props){
 	)
 }
 
+// Pass the object of the leaders information one at a time to "Leader" for a list item of their stats
 function Leaderboard(props){
 	let arrKeys = Object.keys(props.leaders)
 	return(

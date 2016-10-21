@@ -36,8 +36,6 @@ var styles = {
 	}
 }
 
-// will have to attach function to button to turn state.finish in container to ""
-
 function Finish(props){
 	return (
 		<div className="modalAll" style={styles.modalAll}>
