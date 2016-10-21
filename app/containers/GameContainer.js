@@ -98,7 +98,8 @@ const GameContainer = React.createClass({
 				this.setState({
 					finish: "YOU WIN!",
 					wins: wins + 1,
-					moves: 0
+					moves: 0,
+					end: true
 				})
 
 				updateMove(userId, [[0,0,0],[0,0,0],[0,0,0]], ["00","01",'02','10','11','12','20','21','22'], wins, losses, ties)
@@ -107,7 +108,8 @@ const GameContainer = React.createClass({
 					this.setState({
 						finish: "It's A TIE!",
 						ties: ties+1,
-						moves: 0
+						moves: 0,
+						end: true
 					})
 
 					updateMove(userId, [[0,0,0],[0,0,0],[0,0,0]], ["00","01",'02','10','11','12','20','21','22'], wins, losses, ties)
@@ -127,7 +129,8 @@ const GameContainer = React.createClass({
 					this.setState({
 						finish: "YOU LOSE!",
 						losses: losses+1,
-						moves: 0
+						moves: 0,
+						end: true
 					})
 
 					updateMove(userId, [[0,0,0],[0,0,0],[0,0,0]], ["00","01",'02','10','11','12','20','21','22'], wins, losses, ties)	
@@ -154,7 +157,8 @@ const GameContainer = React.createClass({
 					],
 			boxIdx:["00","01",'02','10','11','12','20','21','22'],
 			finish: "",
-			moves: 0
+			moves: 0,
+			end: false
 		})
 		updateMove(userId, board, boxIdx, wins, losses, ties)
 	},
@@ -170,7 +174,8 @@ const GameContainer = React.createClass({
 			boxIdx:["00","01",'02','10','11','12','20','21','22'],
 			start: false,
 			finish: "",
-			moves: 0
+			moves: 0,
+			end: false
 		})
 		updateMove(userId, board, boxIdx, wins, losses, ties);
 		this.handleGetLeaders();

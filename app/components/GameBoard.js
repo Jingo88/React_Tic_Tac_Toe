@@ -17,25 +17,40 @@ var styles = {
 }
 
 function Box(props){
-
+	console.log('WE ARE IN THE BOX')
+	console.log(props)
 	return(
-		<div 
-			className = "col s4"
-			id = {props.idx}
-			style={styles.box}
-			onClick = {props.onUserMove}>
-			<h1>{(props.idx === "X" || props.idx === "O") ? props.idx : " "}</h1>
+		<div>
+			{props.end === false ? 
+				<div 
+					className = "col s4"
+					id = {props.idx}
+					style={styles.box}
+					onClick = {props.onUserMove}>
+					<h1>{(props.idx === "X" || props.idx === "O") ? props.idx : " "}</h1>
+				</div>
+				:
+				<div 
+					className = "col s4"
+					id = {props.idx}
+					style={styles.box}>
+					<h1>{(props.idx === "X" || props.idx === "O") ? props.idx : " "}</h1>
+				</div>
+			}
 		</div>
 	)
 }
 
 function GameComponent(props){
+	console.log('WE ARE IN THE GAME COMPONENT')
+	console.log(props)
 	return(
 			<div className='row'>
 				{props.data.boxIdx.map(function(state){
 					return <Box 
 						idx={state} 
-						onUserMove={props.onUserMove}/>
+						onUserMove={props.onUserMove}
+						end={props.data.end}/>
 				})}
 				
 				{props.data.finish === "" ? 

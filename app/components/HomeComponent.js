@@ -23,8 +23,8 @@ function UserInput(props){
 	return(
 		<div>
 			<form onSubmit = {props.onUserSubmit} className="col s8 push-s2">
-				<input type="text" placeholder="Enter Your Username" data="username" className="input-field col s12"/>
-				<input type="password" placeholder="Enter Your Password" data="password" className="input-field col s12"/>
+				<input type="text" placeholder="Enter Your Username" data="username" className="input-field col s12 validate"/>
+				<input type="password" placeholder="Enter Your Password" data="password" className="input-field col s12 validate"/>
 				<input type="submit" className="waves-light waves-effect btn col s2" />
 				<button className="waves-effect waves-light btn col s2 push-s2"><a href="/" style={styles.aInherit}>Cancel</a></button>
 			</form>
