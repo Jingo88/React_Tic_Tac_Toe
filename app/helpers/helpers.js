@@ -1,7 +1,8 @@
 var axios = require('axios');
 
 function login(un, pw){
-	return axios.post('http://localhost:8000/login',
+	return axios.post('http://jasonng.nyc:5001/login',
+	// return axios.post('http://localhost:8000/login',
 		{
 			username: un,
 			password: pw
@@ -13,21 +14,24 @@ function login(un, pw){
 }
 
 function sessionCheck(){
-	return axios.get('http://localhost:8000/session')
+	return axios.get('http://jasonng.nyc:5001/session')
+// return axios.get('http://localhost:8000/session')
 		.then(function(data){
 			return data.data
 		})
 }
 
 function logout(){
-	return axios.get('http://localhost:8000/logout')
+	return axios.get('http://jasonng.nyc:5001/logout')
+// return axios.get('http://localhost:8000/logout')
 		.then(function(data){
 			return data
 		})
 }
 
 function register(un, pw){
-	return axios.post('http://localhost:8000/register',
+	return axios.post('http://jasonng.nyc:5001/register',
+	// return axios.post('http://localhost:8000/register',
 		{
 			username: un,
 			password: pw
@@ -38,7 +42,8 @@ function register(un, pw){
 }
 
 function getLeaders(){
-	return axios.get('http://localhost:8000/leaders')
+	return axios.get('http://jasonng.nyc:5001/leaders')
+// return axios.get('http://localhost:8000/leaders')
 		.then(function(data){
 			return data.data
 		})
@@ -46,7 +51,8 @@ function getLeaders(){
 
 
 function getUserInfo(){
-	return axios.get('http://localhost:8000/start')
+	return axios.get('http://jasonng.nyc:5001/start')
+// return axios.get('http://localhost:8000/start')
 		.then(function(data){
 			return data.data
 		})
@@ -67,7 +73,8 @@ function countMoves(board){
 }
 
 function updateMove(id, board, boxIdx, win, lose, tie){
-	return axios.post('http://localhost:8000/move',
+	return axios.post('http://jasonng.nyc:5001/move',
+	// return axios.post('http://localhost:8000/move',
 			{
 				id: id,
 				board: board,
@@ -84,7 +91,8 @@ function updateMove(id, board, boxIdx, win, lose, tie){
 
 // are we using this?
 function updateFinish(userId, finish){
-	return axios.post('http://localhost:8000/move',
+	return axios.post('http://jasonng.nyc:5001/move',
+	// return axios.post('http://localhost:8000/move',
 		{
 			id: id,
 			board: board,

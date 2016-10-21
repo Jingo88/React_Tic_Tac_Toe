@@ -13,7 +13,8 @@ var webpackConfig = require('./webpack.config.js');
 var defaultPath = path.join(path.resolve('.'), '/app/index.html');
 var compiler = webpack(webpackConfig);
 
-var port = 8000;
+// var port = 8000;
+var port = 5001;
 
 //Cors 
 app.use(function(req, res, next) {
